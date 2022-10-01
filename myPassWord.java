@@ -1,3 +1,4 @@
+package com.arijeta.Exercise;
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.event.*;
@@ -9,31 +10,18 @@ public class myPassWord {
     private  static void placeComponents(JPanel panel)
     {
         panel.setLayout(null);
-        //创建JLabel
-        JLabel userLabel=new JLabel("输入密码所需的位数");
-        userLabel.setBounds(120,20,165,12);
-        panel.add(userLabel);
-
-        //创建文本域用于用户输入所需密码的位数
-        JTextField userText=new JTextField(20);
-        userText.setBounds(140,40,60,30);
-        panel.add(userText);
 
         //创建文本域用于显示随机生成的密码
         JTextField code=new JTextField(20);
-        code.setBounds(120,80,120,30);
+        code.setBounds(120,40,120,30);
         panel.add(code);
 
         //创建生成随机密码按钮
         JButton createCode=new JButton("生成随机密码");
-        //createCode.setBounds(120,120,120,30);
+        createCode.setBounds(120,120,120,30);
         createCode.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               // Scanner sc=new Scanner(System.in);
-                //int n=sc.nextInt();
-                int num=Integer.parseInt(code.getText());
-               // System.out.println("num=" + num);
                 String ffcode=createCode(8);
                 code.setText(ffcode);
                 //code.setBackground(Color.cyan);
